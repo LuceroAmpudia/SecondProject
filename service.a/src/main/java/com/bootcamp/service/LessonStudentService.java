@@ -6,5 +6,5 @@ import com.bootcamp.entity.LessonStudent;
 
 public interface LessonStudentService {
 
-	public List<LessonStudent> findAll();
+	public List<LessonStudent> findAll(LessonStudent pattern);
 }

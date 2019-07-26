@@ -1,5 +1,6 @@
 package com.bootcamp.entity;
 
+
 public class Student {
 	
 	private int idStudent;

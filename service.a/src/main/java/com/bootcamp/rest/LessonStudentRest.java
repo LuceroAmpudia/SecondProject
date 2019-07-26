@@ -22,7 +22,7 @@ public class LessonStudentRest {
 	@GetMapping
 	public List<LessonStudent> findAll()
 	{
-		return lessonStudentService.findAll();
+		return lessonStudentService.findAll(null);
 	}
 	
 	

@@ -18,15 +18,7 @@ public class StudentLesson {
 		this.idStudentLesson = idStudentLesson;
 	}
 	
-	
-	public StudentLesson(Student student, int idStudentLesson) {
-		super();
-		this.student = student;
-		this.idStudentLesson = idStudentLesson;
-	}
-	public StudentLesson() {
 
-	}
 	
 	
 }
