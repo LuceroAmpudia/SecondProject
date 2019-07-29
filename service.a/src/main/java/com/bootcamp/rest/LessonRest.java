@@ -23,8 +23,8 @@ public class LessonRest {
 	@Autowired
 	LessonService lessonService;
 	
-	@GetMapping("/get/{idLesson}")
-	public Optional<Lesson> get(@PathVariable("idLesson") int idLesson)
+	@GetMapping("/{idLesson}")
+	public Optional<Lesson> get(@PathVariable("idLesson") Integer idLesson)
 	{
 		return lessonService.get(idLesson);
 	}
@@ -42,8 +42,8 @@ public class LessonRest {
 	}
 	
 	
-	@DeleteMapping("/delete/{idLesson}")
-	public void delete(@PathVariable("idLesson") int idLesson)
+	@DeleteMapping("/{idLesson}")
+	public void delete(@PathVariable("idLesson") Integer idLesson)
 	{
 		lessonService.delete(idLesson);
 	}

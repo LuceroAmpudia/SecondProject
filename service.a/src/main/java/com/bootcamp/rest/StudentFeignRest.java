@@ -20,33 +20,34 @@ public class StudentFeignRest {
 	@Autowired
 	private StudentClientRest studentClientRest;
 	
-	@GetMapping("/get")
+	@GetMapping
 	public List<Student> findAll()
 	{
 		return studentClientRest.findAll();
 	}
 	
 	
-//	@HystrixCommand(fallbackMethod = "metodoAlternativo")
-	@GetMapping("/get/{idStudent}")
-	public Optional<Student> get(@PathVariable("idStudent") int idStudent) 
+	@HystrixCommand(fallbackMethod = "metodoAlternativo")
+	@GetMapping("/{idStudent}")
+	public Optional<Student> get(@PathVariable("idStudent") Integer idStudent) 
 	{
 		return studentClientRest.get(idStudent);	
 	}
 	
-//	public StudentClientRest metodoAlternativo(int idStudent)
-//	{
-//		Student student=new Student();
-//
-//		student.setIdStudent(idStudent);
-//		student.setFirstName("Lucero");
-//		student.setGender("Femenino");
-//		student.setGrade("2do");
-//		student.setLastName("Ampudia");
-//		student.setLessonName("Algebra");
-//		student.setNivel("Secundario");
-//		
-//		return studentClientRest;
-//	}
-//	
+	public Student  metodoAlternativo(@PathVariable("idStudent") Integer idStudent)
+	{
+		Student student=new Student();
+
+		student.setIdStudent(idStudent);
+		student.setFirstName("Lucero");
+		student.setLastName("Ampudia");
+		student.setGender("Femenino");
+		student.setNivel("Secundario");
+		student.setGrade("2do");
+		student.setLessonName("Algebra");
+		
+		return student;
+	}
+	
+	
 }

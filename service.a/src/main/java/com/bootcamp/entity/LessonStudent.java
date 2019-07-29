@@ -1,7 +1,6 @@
 package com.bootcamp.entity;
 
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -33,7 +32,7 @@ public class LessonStudent {
 		return idLessonStudent;
 	}
 
-	public void setIdLessonStudent(int idLessonStudent) {
+	public void setIdLessonStudent(Integer idLessonStudent) {
 		this.idLessonStudent = idLessonStudent;
 	}
 

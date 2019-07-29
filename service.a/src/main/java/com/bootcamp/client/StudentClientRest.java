@@ -5,6 +5,7 @@ import java.util.Optional;
 
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 
 import com.bootcamp.entity.Student;
 
@@ -16,5 +17,5 @@ public interface StudentClientRest {
 	public List<Student> findAll();
 
 	@GetMapping("/get/{idStudent}")
-	public Optional<Student> get(int idStudent);
+	public Optional<Student> get(@PathVariable("idStudent") Integer idStudent);
 }

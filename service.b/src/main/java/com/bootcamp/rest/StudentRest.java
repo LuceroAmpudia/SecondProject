@@ -24,20 +24,20 @@ public class StudentRest {
 	StudentService studentService;
 	
 	@GetMapping("/get/{idStudent}")
-	public Optional<Student> get(@PathVariable("idStudent") int idStudent) throws Exception
+	public Optional<Student> get(@PathVariable("idStudent") Integer idStudent) throws Exception
 	{
-//		
-//		boolean ok=false;
-//		if(ok==false)
-//		{
-//			throw new Exception("No se puede cargar los datos del estudiante");
-//		}
 		
-//		try {
-//			Thread.sleep(2000L);
-//		}catch  (InterruptedException e) {
-//			e.printStackTrace();
-//		}
+		boolean ok=false;
+		if(ok==false)
+		{
+			throw new Exception("No se puede cargar los datos del estudiante");
+		}
+		
+		try {
+			Thread.sleep(2000L);
+		}catch  (InterruptedException e) {
+			e.printStackTrace();
+		}
 		return studentService.get(idStudent);
 		
 	}
@@ -58,7 +58,7 @@ public class StudentRest {
 	
 	
 	@DeleteMapping("/delete/{idStudent}")
-	public void delete(@PathVariable("idStudent") int idStudent)
+	public void delete(@PathVariable("idStudent") Integer idStudent)
 	{
 		studentService.delete(idStudent);
 	}

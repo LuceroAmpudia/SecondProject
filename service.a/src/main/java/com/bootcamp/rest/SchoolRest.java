@@ -26,33 +26,33 @@ public class SchoolRest {
 	@Autowired
 	SchoolService schoolService;
 	
-	@GetMapping("/get/{idSchool}")
-	public Optional<School> get(@PathVariable("idSchool") int idSchool)
+	@GetMapping("/{idSchool}")
+	public Optional<School> get(@PathVariable("idSchool") Integer idSchool)
 	{
 		return schoolService.get(idSchool);
 	}
 	
-	@PostMapping("/save")
+	@PostMapping
 	public School save(@RequestBody School school)
 	{
 		return schoolService.save(school);
 	}
 	
-	@GetMapping("/get")
+	@GetMapping
 	public List<School> findAll()
 	{
 		return schoolService.findAll(null);
 	}
 	
 	
-	@DeleteMapping("/delete/{idSchool}")
-	public void delete(@PathVariable("idSchool") int idSchool)
+	@DeleteMapping("/{idSchool}")
+	public void delete(@PathVariable("idSchool") Integer idSchool)
 	{
 		schoolService.delete(idSchool);
 	}
 	
 	
-	@PutMapping("/update")
+	@PutMapping
 	public School update(@RequestBody School idSchool)
 	{
 		return schoolService.update(idSchool);

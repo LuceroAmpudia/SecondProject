@@ -24,8 +24,8 @@ public class TeacherRest {
 	@Autowired
 	TeacherService teacherService;
 	
-	@GetMapping("/get/{idTeacher}")
-	public Optional<Teacher> get(@PathVariable("idTeacher") int idTeacher)
+	@GetMapping("/{idTeacher}")
+	public Optional<Teacher> get(@PathVariable("idTeacher") Integer idTeacher)
 	{
 		return teacherService.get(idTeacher);
 	}
@@ -43,8 +43,8 @@ public class TeacherRest {
 	}
 	
 	
-	@DeleteMapping("/delete/{idTeacher}")
-	public void delete(@PathVariable("idTeacher") int idTeacher)
+	@DeleteMapping("/{idTeacher}")
+	public void delete(@PathVariable("idTeacher") Integer idTeacher)
 	{
 		teacherService.delete(idTeacher);
 	}

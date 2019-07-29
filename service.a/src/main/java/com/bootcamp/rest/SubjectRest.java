@@ -24,8 +24,8 @@ public class SubjectRest {
 	@Autowired
 	SubjectService subjectService;
 	
-	@GetMapping("/get/{idSubject}")
-	public Optional<Subject> get(@PathVariable("idSubject") int idSubject)
+	@GetMapping("/{idSubject}")
+	public Optional<Subject> get(@PathVariable("idSubject") Integer idSubject)
 	{
 		return subjectService.get(idSubject);
 	}
@@ -43,8 +43,8 @@ public class SubjectRest {
 	}
 	
 	
-	@DeleteMapping("/delete/{idSubject}")
-	public void delete(@PathVariable("idSubject") int idSubject)
+	@DeleteMapping("/{idSubject}")
+	public void delete(@PathVariable("idSubject") Integer idSubject)
 	{
 		subjectService.delete(idSubject);
 	}
