@@ -23,24 +23,18 @@ public class LessonStudent {
 	
 	
 	@ManyToOne
-	@JoinColumn(name = "id_lesson", referencedColumnName = "idLesson")
-	private Lesson idLesson;
+	@JoinColumn(name = "lesson_Name", referencedColumnName = "lessonName")
+	private Lesson lessonName;
 	
 
+	//private Student lessonNamest;
+	
 	public int getIdLessonStudent() {
 		return idLessonStudent;
 	}
 
 	public void setIdLessonStudent(int idLessonStudent) {
 		this.idLessonStudent = idLessonStudent;
-	}
-
-	public Lesson getIdLesson() {
-		return idLesson;
-	}
-
-	public void setIdLesson(Lesson idLesson) {
-		this.idLesson = idLesson;
 	}
 
 	
