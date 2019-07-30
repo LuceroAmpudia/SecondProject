@@ -25,11 +25,14 @@ public class LessonStudentServiceImplement implements LessonStudentService{
 	public List<LessonStudent> findAll(LessonStudent pattern) {
 
 		
-			//return studentClientRest.findAll().stream().map(s->new LessonStudent()).collect(Collectors.toList()); 
-			return	lessonStudentRepository.findAll();
+			return studentClientRest.findAll().stream().map(s->new LessonStudent()).collect(Collectors.toList()); 
+			//return	lessonStudentRepository.findAll();
 		}
 
-	
+	@Override
+	public LessonStudent save(LessonStudent pattern) {
+		return lessonStudentRepository.save(pattern);
+	}
 
 
 }

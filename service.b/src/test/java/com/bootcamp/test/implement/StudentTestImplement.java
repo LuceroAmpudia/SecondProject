@@ -39,7 +39,7 @@ public class StudentTestImplement extends ApplicationTests{
 	     			.andExpect(jsonPath("$.gender").value("masculino"))
 					.andExpect(jsonPath("$.nivel").value("primario"))
 	     			.andExpect(jsonPath("$.grade").value("6to"))
-	     			.andExpect(jsonPath("$.lessonName").value("Matematica")); 
+	     			.andExpect(jsonPath("$.lessonNameSt").value("Matematica")); 
 
 		}
 	    

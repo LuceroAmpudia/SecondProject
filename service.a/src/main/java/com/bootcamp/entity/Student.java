@@ -9,7 +9,7 @@ public class Student {
 	private String gender;
 	private String nivel;
 	private String grade;
-	private String lessonName;
+	private String lessonNameSt;
 	
 	public int getIdStudent() {
 		return idStudent;
@@ -26,11 +26,12 @@ public class Student {
 	public String getLastName() {
 		return lastName;
 	}
-	public String getLessonName() {
-		return lessonName;
+	
+	public String getLessonNameSt() {
+		return lessonNameSt;
 	}
-	public void setLessonName(String lessonName) {
-		this.lessonName = lessonName;
+	public void setLessonNameSt(String lessonNameSt) {
+		this.lessonNameSt = lessonNameSt;
 	}
 	public void setLastName(String lastName) {
 		this.lastName = lastName;

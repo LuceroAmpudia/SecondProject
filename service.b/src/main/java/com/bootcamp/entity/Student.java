@@ -38,18 +38,12 @@ public class Student {
 	private String grade;
 
 	@Column(name="clase")
-	private String lessonName;
+	private String lessonNameSt;
 	
 	
 	
 	
-	public String getLessonName() {
-		return lessonName;
-	}
-
-	public void setLessonName(String lessonName) {
-		this.lessonName = lessonName;
-	}
+	
 
 	// Here the getters and setters are generated
 	public int getIdStudent() {
@@ -98,6 +92,14 @@ public class Student {
 
 	public void setGrade(String grade) {
 		this.grade = grade;
+	}
+
+	public String getLessonNameSt() {
+		return lessonNameSt;
+	}
+
+	public void setLessonNameSt(String lessonNameSt) {
+		this.lessonNameSt = lessonNameSt;
 	}
 	
 	

@@ -44,7 +44,7 @@ public class StudentFeignRest {
 		student.setGender("Femenino");
 		student.setNivel("Secundario");
 		student.setGrade("2do");
-		student.setLessonName("Algebra");
+		student.setLessonNameSt("Algebra");
 		
 		return Optional.of(student);
 	}
