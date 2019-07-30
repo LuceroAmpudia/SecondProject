@@ -20,13 +20,13 @@ public class LessonStudent {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int idLessonStudent;
 	
-
+	
+	
 	@ManyToOne
 	@JoinColumn(name = "id_lesson", referencedColumnName = "idLesson")
 	private Lesson idLesson;
 	
 
-	
 	public int getIdLessonStudent() {
 		return idLessonStudent;
 	}
