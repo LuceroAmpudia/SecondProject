@@ -1,6 +1,8 @@
 package com.bootcamp.entity;
 
 
+
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -23,16 +25,13 @@ public class LessonStudent {
 	@JoinColumn(name = "id_lesson", referencedColumnName = "idLesson")
 	private Lesson idLesson;
 	
-//	@ManyToOne
-//	@JoinColumn(name = "id_student")
-//	@Column(name = "id_student")
-//	private Student idStudent;
 
+	
 	public int getIdLessonStudent() {
 		return idLessonStudent;
 	}
 
-	public void setIdLessonStudent(Integer idLessonStudent) {
+	public void setIdLessonStudent(int idLessonStudent) {
 		this.idLessonStudent = idLessonStudent;
 	}
 
@@ -45,23 +44,8 @@ public class LessonStudent {
 	}
 
 	
-//	public Student getIdStudent() {
-//		return idStudent;
-//	}
-//
-//	public void setIdStudent(Student idStudent) {
-//		this.idStudent = idStudent;
-//	}
 
-	public LessonStudent() {
 
-	}
-
-//	public LessonStudent(int idLessonStudent, Lesson idLesson, Student idStudent) {
-//		this.idLessonStudent = idLessonStudent;
-//		this.idLesson = idLesson;
-//		this.idStudent = idStudent;
-//	}
 
 
 

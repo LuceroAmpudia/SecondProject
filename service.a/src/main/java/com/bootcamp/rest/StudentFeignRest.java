@@ -34,7 +34,7 @@ public class StudentFeignRest {
 		return studentClientRest.get(idStudent);	
 	}
 	
-	public Student  metodoAlternativo(@PathVariable("idStudent") Integer idStudent)
+	public Optional<Student>  metodoAlternativo(@PathVariable("idStudent") Integer idStudent)
 	{
 		Student student=new Student();
 
@@ -46,7 +46,7 @@ public class StudentFeignRest {
 		student.setGrade("2do");
 		student.setLessonName("Algebra");
 		
-		return student;
+		return Optional.of(student);
 	}
 	
 	
